@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USL - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="form-cont">
+            <div style="" class="form">
+                <div class="logoForm">
+                    <img src="assets/logo.svg" alt="" srcset="">
+                </div>
+                <h1>Log In</h1>
+                <p>We’re so happy to see you again</p>
+                <form action="">
+                    <label for="username">Username or Email</label>
+                    <input class="inputText" type="text" id="username" name="username" placeholder='Enter your Email or Username...'>
+                    <label for="Password">Password</label>
+                    <div class="passwordStyle">
+                        <input class="passwordS" type="password" id="Password1" name="Password" placeholder="Enter your Password...">
+                        <img onclick="showHide('Password1')" src="assets/show.svg" style="cursor: pointer;width: 1.125rem;" alt="" srcset="">
+                    </div>
+                    <input type="submit" value="Get Started >">
+                    </input>
+                </form>
+                <a class="forgotP" href="./Forgot Password.html">Forgot Password?</a>
+                <div style="width: 100%;display: flex;align-items: center;justify-content: center;">
+                    <div class="lineSplit"></div>
+                </div>
+                <div class="createOne">Don’t have account?<a href="./Create Account.html">Create Account</a></div>
+            </div>
+            <div class="footer-form">
+                <p >© 2023 US Labels. All rights reserved</p>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+        </div>
+        
+        
+    </section>
+
+</body>
+<script>
+    function showHide(idPass) {
+        var x = document.getElementById(idPass);
+        const parentElement = x.parentNode;
+        const img = parentElement.children[1];
+        if (x.type === "password") {
+            x.type = "text";
+            img.src = "assets/hide.svg"
+        } else {
+            img.src = "assets/show.svg"
+            x.type = "password";
+        }
+    }
+</script>
+
+</html>
